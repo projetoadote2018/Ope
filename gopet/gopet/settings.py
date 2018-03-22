@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'home',
     'animal',
     'empreendimento',
+    'evento',
+    'plano',
+    'servico',
+    'usuarios',
 ]
 
 MIDDLEWARE = [

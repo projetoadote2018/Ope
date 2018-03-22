@@ -25,7 +25,7 @@ class Animal(models.Model):
     castrado = models.BooleanField(default=False)
     origem = models.CharField(max_length=30)
     comport = models.CharField(max_length=30, name='Comportamento')
-    saude = models.TextField(max_length=600)
+    saude = models.TextField(max_length=600, name='Descrição da saúde do animal')
 
     def __str__(self):
         return self.nome
