@@ -7,7 +7,7 @@ class Animal(models.Model):
     ra = models.IntegerField()
     '''raca poderia ser uma FK'''
     raca = models.CharField(max_length=25)
-    idade = models.IntegerField(max_length=3)
+    idade = models.IntegerField()
     portes = (
         ('pp', 'Muito pequeno'),
         ('p', 'Pequeno'),
@@ -30,3 +30,12 @@ class Animal(models.Model):
     def __str__(self):
         return self.nome
 
+
+class Adocao(models.Model):
+    usuario = models.ForeignKey('usuarios.Usuario', name='Nome do usuário',on_delete=models.CASCADE)
+    animal = models.ForeignKey('Animal', name='Animal a ser adotado',on_delete=models.CASCADE)
+    data = models.DateField(name='Data da adoção')
+    hora = models.TimeField(name='Hora da doação')
+    contrato = models.CharField(max_length=15, name='Contrato de adoção')
+    def __str__(self):
+        return self.nome
