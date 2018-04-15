@@ -1,0 +1,17 @@
+/*
+CSS GO PET
+ */
+
+ 
+/* Browser Resets */
+.spacer.gopet,.section.gopet 
+{
+	background:#2E8B57;
+}
+.gopet-color
+{ 
+color: #fff;
+}
+#logo-menu{
+	width:4%;
+}
